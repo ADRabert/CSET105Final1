@@ -1,9 +1,10 @@
-const groceryList = document.getElementById("groceryList"), addToList = (groceryItem) => {
+const groceryList = document.getElementById("groceryList");
+const addToList = (groceryItem) => {
 	const groceryListElem = document.createElement("li");
-	groceryListElem.className = "unpurchased", groceryListElem.innerText = groceryItem;
+	groceryListElem.innerHTML = `<a class="unpurchased" href="#" onclick="changeStatus(this)">${groceryItem}</a>`;
 	groceryList.append(groceryListElem);
 }, showItems = (selection) => {
-	if (document.getElementsByTagName("ul")) document.getElementsByTagName("ul")[0].replaceWith(groceryList); 
+	document.getElementsByTagName("ul")[0].replaceWith(groceryList); 
 	if (selection !== "allGroceries") {
 		if (selection === "purchased") {
 			const purchasedList = document.createElement("ul");
@@ -27,4 +28,7 @@ const groceryList = document.getElementById("groceryList"), addToList = (grocery
 			document.getElementById("groceryList").replaceWith(unpurchasedList);
 		}
 	}
+}, changeStatus = (bullet) => {
+	if (bullet.className === "unpurchased" ) bullet.className = "purchased";
+	else bullet.className = "unpurchased";
 }
