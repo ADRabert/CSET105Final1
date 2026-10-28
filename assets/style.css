@@ -44,3 +44,17 @@ body{
 #displayOptions:hover{
 	scale: 1.1;
 }
+
+.unpurchased {
+	color: #000;
+	text-decoration: unset;
+}
+
+.unpurchased:hover, .purchased {
+	color: #000;
+	text-decoration: line-through;
+}
+
+li {
+	font-size: 150%;
+}
