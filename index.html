@@ -7,14 +7,16 @@
 <h1>Grocery List</h1>
 <div class="contentBox">
 	<input type="text" id="groceryInput" placeholder="Enter your desired groceries: ">
-	<button id="addItem">Add To List</button>
-	<select id="displayOptions" name="displayOptions">
+	<button id="addItem" onclick="addToList(document.getElementById(`groceryInput`).value)">Add To List</button>
+	<select id="displayOptions" onchange="showItems(this.value)" name="displayOptions">
 		<option value="allGroceries">Show All</option>
 		<option value="purchased">Show Purchased</option>
 		<option value="unpurchased">Show Unpurchased</option>
 	</select>
+	<ul id="groceryList"></ul>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+<script src="assets/script.js"></script>
