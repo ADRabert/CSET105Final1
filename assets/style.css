@@ -22,7 +22,6 @@ body{
 	border-radius: 360px;
 	padding: 10;
 	margin: 10;
-	cursor: pointer;
 	text-align: center;
 	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 	transition: transform 0.2s, box-shadow 0.2s;
@@ -57,4 +56,12 @@ body{
 #displayOptions:hover{
 	scale: 1.1;
 	box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.done{
+	text-decoration: line-through;
+}
+
+#groceryList:hover{
+text-decoration: line-through;
 }

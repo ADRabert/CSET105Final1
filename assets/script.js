@@ -1,6 +1,6 @@
 const groceryList = document.getElementById("groceryList"), addToList = (groceryItem) => {
 	const groceryListElem = document.createElement("li");
-	groceryListElem.innerText = groceryItem;
+	groceryListElem.innerHTML = `<button>${groceryItem}</button>`;
 	groceryList.append(groceryListElem);
 }, showItems = (selection) => {
 	const purchasedItems = document.body.getElementsByClassName("purchased");
@@ -21,3 +21,17 @@ const groceryList = document.getElementById("groceryList"), addToList = (grocery
 		}
 	} else document.getElementById("list").replaceWith(groceryList);
 }
+
+function strikeThrough(groceryList){
+    const list = document.getElementById(groceryList)
+if (!list){
+    console.error(`List with ID "${groceryList}" not found.`)
+    return;
+}
+list.addEventListener('click', function(strike){
+if (strike.target && strike.target.tagname === 'LI'){
+    strike.target.classList.toggle('done');
+}
+});
+}
+strikeThrough()
