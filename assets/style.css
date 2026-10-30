@@ -7,7 +7,8 @@
 h1{
 	text-align: center;
 	padding: 12px;
-	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin-top: 30px;
 }
 
 body{
@@ -23,10 +24,14 @@ body{
 	font-size: 20px;
 	padding: 10;
 	margin: 10;
+	cursor: pointer;
 	text-align: center;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #groceryInput:hover, #addItem:hover, #displayOptions:hover{
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 	scale: 1.1;
 	transition: scale 0.2s;
 }
@@ -41,4 +46,24 @@ body{
 
 .unpurchased:hover, .purchased {
 	text-decoration: line-through;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+#addItem{
+	border-radius: 360px;
+	padding: 10;
+	margin: 10;
+	cursor: pointer;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#displayOptions{
+	border-radius: 360px;
+	padding: 10;
+	text-align: center;
+	margin: 10;
+	cursor: pointer;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	transition: transform 0.2s, box-shadow 0.2s;
 }
