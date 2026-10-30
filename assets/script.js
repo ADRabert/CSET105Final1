@@ -29,6 +29,6 @@ const addToList = (groceryItem) => {
 		}
 	}
 }, changeStatus = (bullet) => {
-	if (bullet.className === "unpurchased" ) bullet.className = "purchased";
+	if (bullet.className === "unpurchased") bullet.className = "purchased";
 	else bullet.className = "unpurchased";
 }
